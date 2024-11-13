@@ -1,0 +1,65 @@
+---
+
+---
+
+<header id="nav-bar"  class="fixed top-0 flex w-full justify-between px-12 h-28 items-center">
+    <div>
+        <a href="/">
+            <img src="/img/logo.svg" alt="logo" class="w-44">
+        </a>
+    </div>
+    <nav class="flex flex-wrap gap-5">
+        <a class="underline-animate" href="/">Propiedades</a> 
+        <a class="underline-animate" href="/">Soluciones</a>
+        <a class="underline-animate" href="/">Nuestros Clientes</a>
+        <a class="underline-animate" href="/">Quienes Somos</a>
+        <a class="underline-animate" href="/">Contacto</a>
+    </nav>
+</header>
+
+<style>
+    #nav-bar{
+        color:rgb(0 79 137);
+        z-index: 1;
+        background-color: rgb(210 210 228);
+        animation: blur linear both;
+        animation-timeline:scroll();
+        animation-range: 0 500px;       
+    }
+
+    @keyframes blur {
+        to{
+            color:whitesmoke;
+            background-color: rgba(88, 143, 247, 0.3);
+            
+            backdrop-filter: blur(10px);
+
+        }
+        
+    }
+
+  
+    .underline-animate{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+
+    }
+    .underline-animate::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: currentColor;
+        width: 100%;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: bottom left;
+    }
+    .underline-animate:hover::after{
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+   
+</style>

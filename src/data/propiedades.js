@@ -1,0 +1,122 @@
+export const propiedades = [
+    {
+      id: 1,
+      tipo: "Casa",
+      ambientes: 5,
+      habitaciones: 3,
+      baños: 2,
+      superficie: 150,
+      operacion: "venta",
+      precio: 75000,
+      provincia: "Buenos Aires",
+      localidad: "La Plata"
+    },
+    {
+      id: 2,
+      tipo: "Departamento",
+      ambientes: 3,
+      habitaciones: 2,
+      baños: 1,
+      superficie: 70,
+      operacion: "alquiler",
+      precio: 30000,
+      provincia: "Córdoba",
+      localidad: "Córdoba Capital"
+    },
+    {
+      id: 3,
+      tipo: "Casa",
+      ambientes: 6,
+      habitaciones: 4,
+      baños: 3,
+      superficie: 200,
+      operacion: "venta",
+      precio: 80000,
+      provincia: "Mendoza",
+      localidad: "Mendoza Capital"
+    },
+    {
+      id: 4,
+      tipo: "Departamento",
+      ambientes: 4,
+      habitaciones: 2,
+      baños: 2,
+      superficie: 90,
+      operacion: "alquiler",
+      precio: 28000,
+      provincia: "Santa Fe",
+      localidad: "Rosario"
+    },
+    {
+      id: 5,
+      tipo: "Casa",
+      ambientes: 7,
+      habitaciones: 5,
+      baños: 4,
+      superficie: 250,
+      operacion: "venta",
+      precio: 78000,
+      provincia: "Buenos Aires",
+      localidad: "Mar del Plata"
+    },
+    {
+      id: 6,
+      tipo: "Departamento",
+      ambientes: 2,
+      habitaciones: 1,
+      baños: 1,
+      superficie: 50,
+      operacion: "alquiler",
+      precio: 25000,
+      provincia: "Neuquén",
+      localidad: "Neuquén Capital"
+    },
+    {
+      id: 7,
+      tipo: "Casa",
+      ambientes: 4,
+      habitaciones: 3,
+      baños: 2,
+      superficie: 140,
+      operacion: "venta",
+      precio: 60000,
+      provincia: "Salta",
+      localidad: "Salta Capital"
+    },
+    {
+      id: 8,
+      tipo: "Departamento",
+      ambientes: 3,
+      habitaciones: 2,
+      baños: 1,
+      superficie: 65,
+      operacion: "alquiler",
+      precio: 32000,
+      provincia: "Tucumán",
+      localidad: "San Miguel de Tucumán"
+    },
+    {
+      id: 9,
+      tipo: "Casa",
+      ambientes: 5,
+      habitaciones: 4,
+      baños: 2,
+      superficie: 160,
+      operacion: "venta",
+      precio: 70000,
+      provincia: "Entre Ríos",
+      localidad: "Paraná"
+    },
+    {
+      id: 10,
+      tipo: "Departamento",
+      ambientes: 4,
+      habitaciones: 3,
+      baños: 2,
+      superficie: 85,
+      operacion: "alquiler",
+      precio: 35000,
+      provincia: "Jujuy",
+      localidad: "San Salvador de Jujuy"
+    }
+  ];

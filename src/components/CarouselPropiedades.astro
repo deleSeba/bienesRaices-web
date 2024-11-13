@@ -1,0 +1,84 @@
+--- 
+import ArrowRight from "./icon/ArrowRight.astro"
+import Cama from "./icon/Cama.astro"
+import Bath from "./icon/Bath.astro"
+import Area from "./icon/Area.astro"
+import Pin from "./icon/Pin.astro"
+const {propiedad}= Astro.props
+---
+
+<div id=`carrousel_${propiedad.id}` class="h-full w-[400px] m-2 flex-shrink-0 cursor-pointer" >
+    <div class="rounded-3xl overflow-hidden mb-4 h-[250px] relative img-brillo">
+        <img src=`./img/propiedades/prop_${propiedad.id}.jpg` alt=`${propiedad.localidad}` class="size-[100%] object-cover  top-0 left-0 absolute">
+        <span class="absolute flex gap-2 top-3 left-4 border border-white text-xs rounded-xl px-4 py-2 font-semibold hover:bg-white hover:text-black">
+            Detalles <ArrowRight/>
+        </span>
+        
+    </div>
+    <div class="flex flex-col gap-4">
+        <div class="gap-4 border-b[1px] border-gray-400">
+            <div class="flex items-center gap-2">
+            <Cama class="text-slate-700 leading-7 whitespace-normal size-8"/>
+             <h5>Habitaciones</h5>
+             <strong>{propiedad.habitaciones}</strong>
+            </div>
+            <div class="flex items-center gap-2">
+                <Bath class="text-slate-700 leading-7 whitespace-normal size-8"/>
+                 <h5>Baño</h5>
+                 <strong>{propiedad.baños}</strong>
+             </div>
+             <div class="flex items-center gap-2">
+                <Area class="text-slate-700 leading-7 whitespace-normal size-8"/>
+                 <h5>Superficie</h5>
+                 <strong>{propiedad.superficie} mts2.</strong>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col p-2 text-slate-700">
+        <h5 class="text-2xl font-semibold">{propiedad.tipo}</h5>
+        <h5 class="text-xl font-semibold">{propiedad.ambientes} ambientes</h5>
+        <span class="text-lg font-semibold capitalize">{propiedad.precio} u$d, {propiedad.operacion}</span>
+        <div class="flex gap-2">
+            <span>{propiedad.localidad}, {propiedad.provincia}</span>
+            <Pin/>
+        </div>
+    </div>
+</div>
+
+<style>
+    .img-brillo::after{
+
+        position: absolute;
+        top: 0;
+        left: -150%;
+        z-index: 2;
+        display: block;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            rgba(255,255,255,0)0%,
+            rgba(255,255,255,0.3)75%,
+            rgba(255,255,255,0)100%
+        );
+        transform: skewX(-75deg);
+    }
+    .img-brillo img{
+        transition: transform 0.5s ease-in;
+    }
+    .img-brillo:hover{
+        img{transform: scale(1.1)}
+    }
+    .img-brillo:hover::after{
+        animation: imgBrillo 1s ease-out; 
+    }
+    @keyframes imgBrillo {
+        100%{
+            left:150%;
+        }
+        
+    }
+
+    
+</style>
